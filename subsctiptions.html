@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>My Subscriptions | StreamBill</title>
+<meta name="description" content="StreamBill - Manage subscriptions. Track plans. Stream smarter.">
+<link rel="stylesheet" href="css/subscriptions-pricing.css">
+</head>
+<body class="sb-body">
+<a class="sb-sr" href="#main">Skip to content</a>
+<aside class="sb-sidebar" id="sbSidebar" aria-label="Primary">
+  <a class="sb-brand" href="index.html"><span class="sb-brand-mark"><i data-lucide="play" aria-hidden="true"></i></span>StreamBill</a>
+  <nav class="sb-nav" aria-label="Main navigation">
+    <a href="index.html"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Dashboard</a>
+    <a href="analytics.html"><i data-lucide="bar-chart-3" aria-hidden="true"></i>Analytics</a>
+    <a href="subscriptions.html" aria-current="page"><i data-lucide="tv" aria-hidden="true"></i>Subscriptions</a>
+    <a href="pricing.html"><i data-lucide="tags" aria-hidden="true"></i>Pricing</a>
+    <a href="payments.html"><i data-lucide="credit-card" aria-hidden="true"></i>Payments</a>
+    <a href="invoices.html"><i data-lucide="file-text" aria-hidden="true"></i>Invoices</a>
+  </nav>
+  <p class="sb-tagline">Manage subscriptions. Track plans. Stream smarter.</p>
+</aside>
+<div class="sb-scrim" id="sbScrim"></div>
+<div class="sb-main">
+  <header class="sb-header">
+    <button type="button" class="sb-btn sb-menu-btn" id="sbMenuBtn" aria-label="Open navigation menu" aria-controls="sbSidebar" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button>
+    <span class="sb-crumb">Subscriptions</span>
+    <span class="sb-avatar" aria-label="Signed in as Harsha" role="img">H</span>
+  </header>
+  <main class="sb-content" id="main">
+    <div class="sb-page-head">
+      <h1>My Subscriptions</h1>
+      <p>Manage all your active and upcoming OTT subscriptions.</p>
+    </div>
+    <section class="subscription-summary" id="subscriptionSummary" aria-label="Subscription summary"></section>
+    <section class="subscription-toolbar" aria-label="Search, filter and sort">
+      <div class="sb-search"><i data-lucide="search" aria-hidden="true"></i>
+        <input type="search" id="subSearch" class="sb-field" placeholder="Search platform or plan" aria-label="Search subscriptions"></div>
+      <select id="subStatus" class="sb-field" aria-label="Filter by status"><option value="all">All statuses</option></select>
+      <select id="subCycle" class="sb-field" aria-label="Filter by billing cycle"><option value="all">All billing cycles</option><option>Monthly</option><option>Yearly</option></select>
+      <select id="subSort" class="sb-field" aria-label="Sort subscriptions">
+        <option value="name">Name (A–Z)</option><option value="price-desc">Price: high to low</option>
+        <option value="price-asc">Price: low to high</option><option value="date">Next billing date</option></select>
+    </section>
+    <section class="subscription-grid" id="subscriptionGrid" aria-live="polite" aria-label="Your subscriptions"></section>
+  </main>
+</div>
+
+<div class="sb-modal subscription-modal" id="manageModal" hidden>
+  <div class="sb-dialog" role="dialog" aria-modal="true" aria-labelledby="manageTitle">
+    <div class="sb-dialog-head">
+      <span class="sc-logo" id="manageLogo" aria-hidden="true"></span>
+      <div><h2 id="manageTitle">Manage subscription</h2><span id="manageStatus" class="sc-status"></span></div>
+      <button type="button" class="sb-close" data-close-modal aria-label="Close">&times;</button>
+    </div>
+    <div id="manageBody"></div>
+  </div>
+</div>
+<script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+<script src="js/data-service.js"></script>
+<script src="js/shared-ui.js"></script>
+<script src="js/subscriptions.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pricing | StreamBill</title>
+<meta name="description" content="StreamBill - Manage subscriptions. Track plans. Stream smarter.">
+<link rel="stylesheet" href="css/subscriptions-pricing.css">
+</head>
+<body class="sb-body">
+<a class="sb-sr" href="#main">Skip to content</a>
+<aside class="sb-sidebar" id="sbSidebar" aria-label="Primary">
+  <a class="sb-brand" href="index.html"><span class="sb-brand-mark"><i data-lucide="play" aria-hidden="true"></i></span>StreamBill</a>
+  <nav class="sb-nav" aria-label="Main navigation">
+    <a href="index.html"><i data-lucide="layout-dashboard" aria-hidden="true"></i>Dashboard</a>
+    <a href="analytics.html"><i data-lucide="bar-chart-3" aria-hidden="true"></i>Analytics</a>
+    <a href="subscriptions.html"><i data-lucide="tv" aria-hidden="true"></i>Subscriptions</a>
+    <a href="pricing.html" aria-current="page"><i data-lucide="tags" aria-hidden="true"></i>Pricing</a>
+    <a href="payments.html"><i data-lucide="credit-card" aria-hidden="true"></i>Payments</a>
+    <a href="invoices.html"><i data-lucide="file-text" aria-hidden="true"></i>Invoices</a>
+  </nav>
+  <p class="sb-tagline">Manage subscriptions. Track plans. Stream smarter.</p>
+</aside>
+<div class="sb-scrim" id="sbScrim"></div>
+<div class="sb-main">
+  <header class="sb-header">
+    <button type="button" class="sb-btn sb-menu-btn" id="sbMenuBtn" aria-label="Open navigation menu" aria-controls="sbSidebar" aria-expanded="false"><i data-lucide="menu" aria-hidden="true"></i></button>
+    <span class="sb-crumb">Pricing</span>
+    <span class="sb-avatar" aria-label="Signed in as Harsha" role="img">H</span>
+  </header>
+  <main class="sb-content" id="main">
+    <div class="sb-page-head pricing-head">
+      <h1>Choose the plan that fits your streaming</h1>
+      <p>Compare StreamBill plans and switch any time. Prices shown are sample values.</p>
+      <span class="pricing-current" id="pricingCurrent"></span>
+    </div>
+    <div class="pricing-toggle" id="pricingToggle" data-cycle="monthly" role="group" aria-label="Billing cycle">
+      <span class="pt-thumb" aria-hidden="true"></span>
+      <button type="button" data-cycle="monthly" aria-pressed="true">Monthly</button>
+      <button type="button" data-cycle="yearly" aria-pressed="false">Yearly</button>
+    </div>
+    <section class="pricing-grid" id="pricingGrid" aria-label="Pricing plans"></section>
+    <section class="pricing-compare" aria-labelledby="compareTitle">
+      <h2 id="compareTitle">Compare plans</h2>
+      <div class="compare-wrap" tabindex="0" role="region" aria-label="Plan comparison table, scrolls horizontally on small screens">
+        <table class="compare-table" id="compareTable"></table>
+      </div>
+    </section>
+  </main>
+</div>
+<script src="https://unpkg.com/lucide@0.453.0/dist/umd/lucide.min.js"></script>
+<script src="js/data-service.js"></script>
+<script src="js/shared-ui.js"></script>
+<script src="js/pricing.js"></script>
+</body>
+</html>
